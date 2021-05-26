@@ -9,3 +9,5 @@ fbi_key = ''
 
 # nps.gov key
 nps_key = 'cC0Svhb5TT7Z2HCXPN3ySHVU565hNfp7Zz3R190F'
+
+# next key
