@@ -1,6 +1,6 @@
 -- create tables --
 CREATE TABLE species(
-	Species_ID text PRIMARY KEY,
+	Species_ID TEXT PRIMARY KEY,
 	park_name TEXT,
 	category TEXT,
 	order_name TEXT,
@@ -16,7 +16,7 @@ CREATE TABLE species(
 );
 
 CREATE TABLE park (
-	id int PRIMARY KEY,
+	id serial PRIMARY KEY,
 	park_code TEXT,
 	park_name TEXT,
 	state text,
