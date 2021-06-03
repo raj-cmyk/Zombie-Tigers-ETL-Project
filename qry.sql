@@ -1,6 +1,6 @@
 -- create tables --
 CREATE TABLE species(
-	Species_ID TEXT PRIMARY KEY,
+	Species_ID text PRIMARY KEY,
 	park_name TEXT,
 	category TEXT,
 	order_name TEXT,
@@ -12,15 +12,25 @@ CREATE TABLE species(
 	nativeness TEXT,
 	abundance TEXT,
 	seasonality TEXT, 
-	status TEXT
+	status TEXT,
+	FOREIGN KEY (park_name) REFERENCES park(park_name)
 );
 
 CREATE TABLE park (
-	id serial PRIMARY KEY,
+	id int PRIMARY KEY,
 	park_code TEXT,
-	park_name TEXT,
+	park_name TEXT UNIQUE,
 	state text,
 	acres int,
 	lat float,
 	lng float
+);
+
+CREATE TABLE park_activity (
+    id SERIAL PRIMARY KEY,
+	rank int,
+	park_name TEXT UNIQUE,
+	recreational_visits TEXT,
+	number_of_activities TEXT,
+	FOREIGN KEY (park_name) REFERENCES park (park_name)
 );
